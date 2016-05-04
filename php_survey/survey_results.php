@@ -71,8 +71,9 @@ switch ($lang) {
     default:
       break;
   }
-  //comment box
 
+  //comment box
+$comment = $_POST['comment'];
  ?>
 
  <!DOCTYPE html>
@@ -161,6 +162,7 @@ switch ($lang) {
                  </td>
              </tr>
          </table>
+         <?php echo $comment ?>
      </div>
  </body>
 
