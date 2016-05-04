@@ -27,6 +27,7 @@
   <head>
     <meta charset="utf-8">
     <title>Survey Results</title>
+    <link rel="stylesheet" href="survey.css" type="text/css">
   </head>
   <body>
     <h1>Survey Results</h1>

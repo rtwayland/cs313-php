@@ -9,7 +9,7 @@
     <script type="text/javascript">
         function addTextArea() {
             var comment = document.getElementById('comment-box');
-            var box = "<textarea name='comment' rows='8' cols='40'></textarea>";
+            var box = "<textarea name='comment' rows='8' cols='40' placeholder='Write your comment here'></textarea>";
             if (document.getElementById('other').checked) {
                 comment.innerHTML = box;
                 comment.style.display = "block";
@@ -22,94 +22,93 @@
 </head>
 
 <body>
-    <form action="http://localhost/php/php_survey/survey_results.php" method="post">
-        <h1>Computer Science Department Issues</h1>
-        <p>Should ECEN 160 Digital Systems be required for the Software Engineering major?</p>
-        <table>
-            <th>Yes</th>
-            <th>No</th>
-            <tr>
-                <td>
-                    <input id="cs160-yes" type="radio" name="cs160" value="yes">
-                </td>
-                <td>
-                    <input id="cs160-no" type="radio" name="cs160" value="no">
-                </td>
-            </tr>
-        </table>
+    <div class="center-form">
+        <form action="http://localhost/php/php_survey/survey_results.php" method="post">
+            <h1>Computer Science Department Issues</h1>
+            <p>Should ECEN 160 Digital Systems be required for the Software Engineering major?</p>
+            <table>
+                <th>Yes</th>
+                <th>No</th>
+                <tr>
+                    <td>
+                        <input id="cs160-yes" type="radio" name="cs160" value="yes">
+                    </td>
+                    <td>
+                        <input id="cs160-no" type="radio" name="cs160" value="no">
+                    </td>
+                </tr>
+            </table>
 
 
-        <p>Should C++ be the first programming language taught?</p>
-        <table>
-            <th>Yes</th>
-            <th>No</th>
-            <tr>
-                <td>
-                    <input id="cpp-yes" type="radio" name="cpp" value="yes">
-                </td>
-                <td>
-                    <input id="cpp-no" type="radio" name="cpp" value="no">
-                </td>
-            </tr>
-        </table>
+            <p>Should C++ be the first programming language taught?</p>
+            <table>
+                <th>Yes</th>
+                <th>No</th>
+                <tr>
+                    <td>
+                        <input id="cpp-yes" type="radio" name="cpp" value="yes">
+                    </td>
+                    <td>
+                        <input id="cpp-no" type="radio" name="cpp" value="no">
+                    </td>
+                </tr>
+            </table>
 
-        <p>Which programming language should be taught as a student's first language?</p>
-        <table>
-            <th>C++</th>
-            <th>Java</th>
-            <th>Python</th>
-            <th>JavaScript</th>
-            <tr>
-                <td>
-                    <input type="radio" name="lang" id="cplus" value="c++">
-                </td>
-                <td>
-                    <input type="radio" name="lang" id="java" value="java">
-                </td>
-                <td>
-                    <input type="radio" name="lang" id="python" value="python">
-                </td>
-                <td>
-                    <input type="radio" name="lang" id="javascript" value="javascript">
-                </td>
-            </tr>
-        </table>
+            <p>Which programming language should be taught as a student's first language?</p>
+            <table>
+                <th>C++</th>
+                <th>Java</th>
+                <th>Python</th>
+                <th>JavaScript</th>
+                <tr>
+                    <td>
+                        <input type="radio" name="lang" id="cplus" value="c++">
+                    </td>
+                    <td>
+                        <input type="radio" name="lang" id="java" value="java">
+                    </td>
+                    <td>
+                        <input type="radio" name="lang" id="python" value="python">
+                    </td>
+                    <td>
+                        <input type="radio" name="lang" id="javascript" value="javascript">
+                    </td>
+                </tr>
+            </table>
 
-        <p>Which of these options would you like to see added as an emphasis in the Computer Science department?</p>
+            <p>Which of these options would you like to see added as an emphasis in the Computer Science department?</p>
 
-        <table>
-            <th>User Experience Design</th>
-            <th>Web Development</th>
-            <th>Game Development</th>
-            <th>Artificial Inteligence</th>
-            <th>Other</th>
-            <tr>
-                <td>
-                    <input type="radio" name="emphasis" value="User Experience Design" onchange="addTextArea()">
-                </td>
-                <td>
-                    <input type="radio" name="emphasis" value="Web Development" onchange="addTextArea()">
-                </td>
-                <td>
-                    <input type="radio" name="emphasis" value="Game Development" onchange="addTextArea()">
-                </td>
-                <td>
-                    <input type="radio" name="emphasis" value="Artificial Inteligence" onchange="addTextArea()">
-                </td>
-                <td>
-                    <input id="other" type="radio" name="emphasis" value="Other" onchange="addTextArea()">
-                </td>
-            </tr>
-        </table>
+            <table>
+                <th>User Experience Design</th>
+                <th>Web Development</th>
+                <th>Game Development</th>
+                <th>Artificial Inteligence</th>
+                <th>Other</th>
+                <tr>
+                    <td>
+                        <input type="radio" name="emphasis" value="User Experience Design" onchange="addTextArea()">
+                    </td>
+                    <td>
+                        <input type="radio" name="emphasis" value="Web Development" onchange="addTextArea()">
+                    </td>
+                    <td>
+                        <input type="radio" name="emphasis" value="Game Development" onchange="addTextArea()">
+                    </td>
+                    <td>
+                        <input type="radio" name="emphasis" value="Artificial Inteligence" onchange="addTextArea()">
+                    </td>
+                    <td>
+                        <input id="other" type="radio" name="emphasis" value="Other" onchange="addTextArea()">
+                    </td>
+                </tr>
+            </table>
 
-        <div id="comment-box"></div>
+            <div id="comment-box"></div>
 
-
-
-
-        <br>
-        <button type="submit" name="button">Submit Survey</button>
-    </form>
+            <br>
+            <button type="submit" name="button">Submit Survey</button>
+        </form>
+    </div>
 </body>
 
 </html>
