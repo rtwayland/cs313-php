@@ -1,0 +1,7 @@
+table input {
+    display: block;
+    margin: auto;
+}
+th, td {
+    padding: 0px 10px 0px 10px;
+}

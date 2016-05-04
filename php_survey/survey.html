@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PHP Survey</title>
+    <link rel="stylesheet" href="survey.css" type="text/css">
+</head>
+
+<body>
+    <form action="http://localhost/php/php_survey/survey_results.php" method="post">
+        <h1>Computer Science Department Issues</h1>
+        <p>Should CS 160 Digital Systems be required for the Software Engineering major?</p>
+        <table>
+            <th>Yes</th>
+            <th>No</th>
+            <tr>
+                <td>
+                    <input id="cs160-yes" type="radio" name="cs160" value="yes">
+                </td>
+                <td>
+                    <input id="cs160-no" type="radio" name="cs160" value="no">
+                </td>
+            </tr>
+        </table>
+
+
+        <p>Should C++ be the first programming language taught?</p>
+        <table>
+            <th>Yes</th>
+            <th>No</th>
+            <tr>
+                <td>
+                    <input id="cpp-yes" type="radio" name="cpp" value="yes">
+                </td>
+                <td>
+                    <input id="cpp-no" type="radio" name="cpp" value="no">
+                </td>
+            </tr>
+        </table>
+
+        <p>Which programming language should be taught as a student's first language?</p>
+        <table>
+            <th>C++</th>
+            <th>Java</th>
+            <th>Python</th>
+            <th>JavaScript</th>
+            <tr>
+                <td>
+                    <input type="radio" name="lang" id="cplus" value="c++">
+                </td>
+                <td>
+                    <input type="radio" name="lang" id="java" value="java">
+                </td>
+                <td>
+                    <input type="radio" name="lang" id="python" value="python">
+                </td>
+                <td>
+                    <input type="radio" name="lang" id="javascript" value="javascript">
+                </td>
+            </tr>
+        </table>
+        <!-- <label for="cplus">C++</label>
+        <input type="radio" name="lang" id="cplus" value="c++">
+
+        <label for="java">Java</label>
+        <input type="radio" name="lang" id="java" value="java">
+
+        <label for="python">Python</label>
+        <input type="radio" name="lang" id="python" value="python">
+
+        <label for="">Javascript</label>
+        <input type="radio" name="lang" id="javascript" value="javascript"> -->
+
+
+
+        <br>
+        <button type="submit" name="button">Submit Survey</button>
+    </form>
+</body>
+
+</html>
