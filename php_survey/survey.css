@@ -73,3 +73,9 @@ textarea {
 textarea::-webkit-input-placeholder {
   font-size: 1.5em;
 }
+.results-wrapper p, .results-wrapper h {
+  text-align: center;
+}
+.results-table tr {
+  text-align: center;
+}
