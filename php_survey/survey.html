@@ -5,6 +5,20 @@
     <meta charset="utf-8">
     <title>PHP Survey</title>
     <link rel="stylesheet" href="survey.css" type="text/css">
+
+    <script type="text/javascript">
+        function addTextArea() {
+            var comment = document.getElementById('comment-box');
+            var box = "<textarea name='comment' rows='8' cols='40'></textarea>";
+            if (document.getElementById('other').checked) {
+                comment.innerHTML = box;
+                comment.style.display = "block";
+            } else {
+                comment.style.display = "none";
+            }
+        }
+    </script>
+
 </head>
 
 <body>
@@ -60,17 +74,36 @@
                 </td>
             </tr>
         </table>
-        <!-- <label for="cplus">C++</label>
-        <input type="radio" name="lang" id="cplus" value="c++">
 
-        <label for="java">Java</label>
-        <input type="radio" name="lang" id="java" value="java">
+        <p>Which of these options would you like to see added as an emphasis in the Computer Science department?</p>
 
-        <label for="python">Python</label>
-        <input type="radio" name="lang" id="python" value="python">
+        <table>
+            <th>User Experience Design</th>
+            <th>Web Development</th>
+            <th>Game Development</th>
+            <th>Artificial Inteligence</th>
+            <th>Other</th>
+            <tr>
+                <td>
+                    <input type="radio" name="emphasis" value="User Experience Design" onchange="addTextArea()">
+                </td>
+                <td>
+                    <input type="radio" name="emphasis" value="Web Development" onchange="addTextArea()">
+                </td>
+                <td>
+                    <input type="radio" name="emphasis" value="Game Development" onchange="addTextArea()">
+                </td>
+                <td>
+                    <input type="radio" name="emphasis" value="Artificial Inteligence" onchange="addTextArea()">
+                </td>
+                <td>
+                    <input id="other" type="radio" name="emphasis" value="Other" onchange="addTextArea()">
+                </td>
+            </tr>
+        </table>
 
-        <label for="">Javascript</label>
-        <input type="radio" name="lang" id="javascript" value="javascript"> -->
+        <div id="comment-box"></div>
+
 
 
 
