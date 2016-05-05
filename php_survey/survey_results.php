@@ -1,7 +1,39 @@
 <?php
+//Open the file
+ $file = fopen('results.txt', 'r') or die('Unable to open file!');
+if (filesize('results.txt') == 0) {
+    fclose($file);
+    $file = fopen('results.txt', 'w');
+    for ($i = 0; $i < 13; ++$i) {
+        fwrite($file, "0\n");
+    }
+    fclose($file);
+}
+ $lines = file('results.txt', FILE_IGNORE_NEW_LINES);
+
 //first question variables
-  $yes160_count = 0;
-  $no160_count = 0;
+  $yes160_count = $lines[0];
+  $no160_count = $lines[1];
+
+  //second question variables
+  $yes_cpp_count = $lines[2];
+  $no_cpp_count = $lines[3];
+
+    //third question variables
+  $cpp_lang = $lines[4];
+  $java_lang = $lines[5];
+  $python_lang = $lines[6];
+  $javascript_lang = $lines[7];
+
+  //fourth question variables
+  $ux = $lines[8];
+  $webDev = $lines[9];
+  $gDev = $lines[10];
+  $ai = $lines[11];
+  $other = $lines[12];
+
+  fclose($file);
+
   $cs160 = $_POST['cs160'];
 
   if ($cs160 == 'yes') {
@@ -10,9 +42,6 @@
       ++$no160_count;
   }
 
-//second question variables
-  $yes_cpp_count = 0;
-  $no_cpp_count = 0;
   $cpp = $_POST['cpp'];
 
   if ($cplus == 'yes') {
@@ -21,11 +50,6 @@
       ++$no_cpp_count;
   }
 
-  //third question variables
-$cpp_lang = 0;
-$java_lang = 0;
-$python_lang = 0;
-$javascript_lang = 0;
 $lang = $_POST['lang'];
 
 switch ($lang) {
@@ -44,12 +68,7 @@ switch ($lang) {
   default:
     break;
 }
-  //fourth question variables
-  $ux = 0;
-  $webDev = 0;
-  $gDev = 0;
-  $ai = 0;
-  $other = 0;
+
   $emphasis = $_POST['emphasis'];
 
   switch ($emphasis) {
@@ -74,6 +93,32 @@ switch ($lang) {
 
   //comment box
 $comment = $_POST['comment'];
+
+$file = fopen('results.txt', 'w');
+
+//first question variables
+  fwrite($file, "$yes160_count\n");
+  fwrite($file, "$no160_count\n");
+
+  //second question variables
+  fwrite($file, "$yes_cpp_count\n");
+  fwrite($file, "$no_cpp_count\n");
+
+    //third question variables
+  fwrite($file, "$cpp_lang\n");
+  fwrite($file, "$java_lang\n");
+  fwrite($file, "$python_lang\n");
+  fwrite($file, "$javascript_lang\n");
+
+  //fourth question variables
+  fwrite($file, "$ux\n");
+  fwrite($file, "$webDev\n");
+  fwrite($file, "$gDev\n");
+  fwrite($file, "$ai\n");
+  fwrite($file, "$other");
+
+  fclose($file);
+
  ?>
 
  <!DOCTYPE html>
