@@ -36,7 +36,7 @@ $lines = file('results.txt', FILE_IGNORE_NEW_LINES);
 
 <body>
     <div class="results-wrapper">
-        <h1 id="taken-message">You have already take this survey</h1>
+        <h1 id="taken-message">You have already taken this survey</h1>
         <h1>Survey Results</h1>
         <p>Digital Systems should be required for Software Engineering majors:</p>
         <table class="results-table">
