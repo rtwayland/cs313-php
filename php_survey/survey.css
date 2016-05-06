@@ -3,10 +3,22 @@
     background-color: #363E4A;
     font-family: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+#view-results {
+    float: right;
+    margin: 1% 10% 0 0;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(36, 214, 166, .7);
+}
+
+#view-results:hover {
+  background-color: rgba(36, 214, 166, .9);
+}
+
 .center-form {
+    clear: both;
     display: block;
     text-align: center;
-    margin-top: 5%;
 }
 h1 {
     font-size: 2.5em;
@@ -56,12 +68,16 @@ button {
     border: 5px solid #777;
     cursor: pointer;
     border-radius: 10px;
-    background-color: rgba(36, 214, 166, .8);
+    background-color: rgba(36, 214, 166, .7);
     padding: 10px;
     font-size: 1em;
     outline: none;
 }
 button:hover {
+  border: 5px solid #999;
+  background-color: rgba(36, 214, 166, .9);
+}
+button:active {
     border: 5px solid #555;
     background-color: rgba(36, 214, 166, .5);
 }

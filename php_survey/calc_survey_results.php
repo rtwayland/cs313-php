@@ -4,7 +4,7 @@
 if (filesize('results.txt') == 0) {
     fclose($file);
     $file = fopen('results.txt', 'w');
-    for ($i = 0; $i < 13; ++$i) {
+    for ($i = 0; $i < 12; ++$i) {
         fwrite($file, "0\n");
     }
     fclose($file);
@@ -30,7 +30,7 @@ if (filesize('results.txt') == 0) {
   $webDev = $lines[9];
   $gDev = $lines[10];
   $ai = $lines[11];
-  $other = $lines[12];
+  // $other = $lines[12];
 
   fclose($file);
 
@@ -84,9 +84,6 @@ switch ($lang) {
     case 'Artificial Inteligence':
       ++$ai;
       break;
-    case 'Other':
-      ++$other;
-      break;
     default:
       break;
   }
@@ -114,7 +111,7 @@ $file = fopen('results.txt', 'w');
   fwrite($file, "$webDev\n");
   fwrite($file, "$gDev\n");
   fwrite($file, "$ai\n");
-  fwrite($file, "$other");
+  // fwrite($file, "$other");
 
   fclose($file);
 
@@ -187,7 +184,6 @@ $file = fopen('results.txt', 'w');
              <th>Web Development</th>
              <th>Game Development</th>
              <th>Artificial Inteligence</th>
-             <th>Other</th>
              <tr>
                  <td>
                      <?php echo $ux; ?>
@@ -200,9 +196,6 @@ $file = fopen('results.txt', 'w');
                  </td>
                  <td>
                      <?php echo $ai; ?>
-                 </td>
-                 <td>
-                     <?php echo $other; ?>
                  </td>
              </tr>
          </table>
