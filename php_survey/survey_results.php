@@ -21,7 +21,7 @@ $lines = file('results.txt', FILE_IGNORE_NEW_LINES);
  $webDev = $lines[9];
  $gDev = $lines[10];
  $ai = $lines[11];
- $other = $lines[12];
+ // $other = $lines[12];
 
  ?>
 
@@ -92,7 +92,6 @@ $lines = file('results.txt', FILE_IGNORE_NEW_LINES);
             <th>Web Development</th>
             <th>Game Development</th>
             <th>Artificial Inteligence</th>
-            <th>Other</th>
             <tr>
                 <td>
                     <?php echo $ux; ?>
@@ -105,9 +104,6 @@ $lines = file('results.txt', FILE_IGNORE_NEW_LINES);
                 </td>
                 <td>
                     <?php echo $ai; ?>
-                </td>
-                <td>
-                    <?php echo $other; ?>
                 </td>
             </tr>
         </table>
