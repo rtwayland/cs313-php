@@ -37,7 +37,7 @@ $lines = file('results.txt', FILE_IGNORE_NEW_LINES);
 <body>
     <div class="results-wrapper">
         <h1>Survey Results</h1>
-        <p>Digital Systems should be required for Software Engineering majors:</p>
+        <p>Should ECEN 160 Digital Systems be required for the Software Engineering major?</p>
         <table class="results-table">
             <th>Yes</th>
             <th>No</th>
@@ -50,7 +50,7 @@ $lines = file('results.txt', FILE_IGNORE_NEW_LINES);
                 </td>
             </tr>
         </table>
-        <p>C++ should be the first programming language learned:</p>
+        <p>Should C++ be the first programming language taught?</p>
         <table class="results-table">
             <th>Yes</th>
             <th>No</th>
