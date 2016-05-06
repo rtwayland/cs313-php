@@ -10,11 +10,9 @@
     border-radius: 10px;
     background-color: rgba(36, 214, 166, .7);
 }
-
 #view-results:hover {
-  background-color: rgba(36, 214, 166, .9);
+    background-color: rgba(36, 214, 166, .9);
 }
-
 .center-form {
     clear: both;
     display: block;
@@ -74,8 +72,8 @@ button {
     outline: none;
 }
 button:hover {
-  border: 5px solid #999;
-  background-color: rgba(36, 214, 166, .9);
+    border: 5px solid #999;
+    background-color: rgba(36, 214, 166, .9);
 }
 button:active {
     border: 5px solid #555;
@@ -95,4 +93,7 @@ textarea {
 }
 .results-table tr {
     text-align: center;
+}
+#taken-message {
+    font-size: 1em;
 }
