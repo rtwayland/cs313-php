@@ -1,4 +1,8 @@
 <?php
+//Open the session
+session_start();
+
+$_SESSION['surveyStatus'] = 'taken';
 //Open the file
  $file = fopen('results.txt', 'r') or die('Unable to open file!');
 if (filesize('results.txt') == 0) {

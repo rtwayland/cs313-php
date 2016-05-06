@@ -1,7 +1,13 @@
-<!-- <?php
+<?php
 //Open the session
 session_start();
- ?> -->
+
+if (isset($_SESSION['surveyStatus'])) {
+    echo 'You have taken this survey before<br>';
+} else {
+    echo 'Please take this survey<br>';
+}
+?>
 
 <!DOCTYPE html>
 <html>
