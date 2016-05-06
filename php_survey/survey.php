@@ -3,7 +3,7 @@
 session_start();
 
 if (isset($_SESSION['surveyStatus'])) {
-    header('Location: http://php-rwayland.rhcloud.com/php_survey/survey_results.php');
+    header('Location: http://php-rwayland.rhcloud.com/php_survey/survey_results_taken.php');
     exit();
 } else {
     echo 'Please take this survey<br>';
