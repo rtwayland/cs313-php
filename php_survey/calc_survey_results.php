@@ -48,7 +48,7 @@ if (filesize('results.txt') == 0) {
 
   $cpp = $_POST['cpp'];
 
-  if ($cplus == 'yes') {
+  if ($cpp == 'yes') {
       ++$yes_cpp_count;
   } else {
       ++$no_cpp_count;
