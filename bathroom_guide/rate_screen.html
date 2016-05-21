@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" lang="en" />
+    <meta name="author" content="Raleigh Wayland" />
+    <title>Rate This Bathroom</title>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <div class="ratings-bar">
+            <a href="index.html" id="back-home">HOME</a>
+            <a href="map_screen.php" id="back-map">BACK TO MAP</a>
+        </div>
+        <div id="rate-page">
+            <form>
+                <h1 style="margin-top: 5px;">Men or Women</h1>
+                <div class="wrapper">
+                    <div class="toggle_radio">
+                        <input type="radio" class="toggle_option" id="first_toggle" name="menOrWomen" value="men">
+                        <input type="radio" checked class="toggle_option" id="second_toggle" name="menOrWomen" value="women">
+
+                        <label for="first_toggle">
+                            <p>MEN </p>
+                        </label>
+                        <label for="second_toggle">
+                            <p>WOMEN </p>
+                        </label>
+                        <div class="toggle_option_slider">
+                        </div>
+                    </div>
+                </div>
+                <h1>Overall Cleanliness</h1>
+                <div class="wrapper">
+                    <div class="toggle_radio" style="width: 320px">
+
+                        <input type="radio" class="toggle_option" id="first_clean" name="clean-rating" value="bad">
+
+                        <input type="radio" checked class="toggle_option" id="second_clean" name="clean-rating" value="decent">
+
+                        <input type="radio" class="toggle_option" id="third_clean" name="clean-rating" value="good">
+
+
+                        <label for="first_clean">
+                            <p>BAD </p>
+                        </label>
+                        <label for="second_clean">
+                            <p>DECENT </p>
+                        </label>
+                        <label for="third_clean">
+                            <p>GOOD </p>
+                        </label>
+
+                        <div class="toggle_option_slider">
+                        </div>
+                    </div>
+                </div>
+
+                <h1>Private Restroom</h1>
+                <div class="wrapper">
+                    <div class="toggle_radio">
+                        <input type="radio" class="toggle_option" id="first_toggle2" name="toggle_option2">
+                        <input type="radio" checked class="toggle_option" id="second_toggle2" name="toggle_option2">
+
+                        <label for="first_toggle2">
+                            <p>NO </p>
+                        </label>
+                        <label for="second_toggle2">
+                            <p>YES </p>
+                        </label>
+                        <div class="toggle_option_slider">
+                        </div>
+                    </div>
+                </div>
+                <h1>Changing Table</h1>
+                <div class="wrapper">
+                    <div class="toggle_radio">
+                        <input type="radio" class="toggle_option" id="first_toggle3" name="toggle_option3">
+                        <input type="radio" checked class="toggle_option" id="second_toggle3" name="toggle_option3">
+
+                        <label for="first_toggle3">
+                            <p>NO </p>
+                        </label>
+                        <label for="second_toggle3">
+                            <p>YES </p>
+                        </label>
+                        <div class="toggle_option_slider">
+                        </div>
+                    </div>
+                </div>
+                <h1>Outside Pet Area</h1>
+                <div class="wrapper">
+                    <div class="toggle_radio">
+                        <input type="radio" class="toggle_option" id="first_toggle4" name="toggle_option4">
+                        <input type="radio" checked class="toggle_option" id="second_toggle4" name="toggle_option4">
+
+                        <label for="first_toggle4">
+                            <p>NO </p>
+                        </label>
+                        <label for="second_toggle4">
+                            <p>YES </p>
+                        </label>
+                        <div class="toggle_option_slider">
+                        </div>
+                    </div>
+                </div>
+                <h1>Soap Quality</h1>
+                <div class="wrapper">
+                    <div class="toggle_radio" style="width: 320px">
+
+                        <input type="radio" class="toggle_option" id="first_soap" name="soap-rating" value="bad">
+
+                        <input type="radio" checked class="toggle_option" id="second_soap" name="soap-rating" value="decent">
+
+                        <input type="radio" class="toggle_option" id="third_soap" name="soap-rating" value="good">
+
+
+                        <label for="first_soap">
+                            <p>BAD </p>
+                        </label>
+                        <label for="second_soap">
+                            <p>DECENT </p>
+                        </label>
+                        <label for="third_soap">
+                            <p>GOOD </p>
+                        </label>
+
+                        <div class="toggle_option_slider">
+                        </div>
+                    </div>
+                </div>
+                <!--<input type="submit">-->
+                <a href="map_screen.html">
+                    <div id="submit-button">Submit</div>
+                </a>
+            </form>
+        </div>
+</body>
+
+</html>

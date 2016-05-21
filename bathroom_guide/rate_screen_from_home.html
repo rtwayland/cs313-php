@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" lang="en" />
+    <meta name="author" content="Raleigh Wayland" />
+    <title>Rate This Bathroom</title>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+
+    <script type="text/javascript" src="script.js"></script>
+
+    <script>
+        function bringToTop() {
+            var toggle = document.getElementById('test-toggle');
+
+            if (toggle.style.zIndex != "-1") {
+                toggle.style.zIndex = "-1";
+            }
+        }
+
+        function resetToggle() {
+            var toggle = document.getElementById('test-toggle');
+
+            if (toggle.style.zIndex == "-1") {
+                toggle.style.zIndex = "0";
+            }
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <div class="ratings-bar">
+            <a href="index.html" id="back-home">HOME</a>
+            <div class="center">
+                <select name="sources" id="sources" class="custom-select sources" placeholder="Bathrooms">
+                    <option>Maverik</option>
+                    <option>Chevron</option>
+                </select>
+            </div>
+            <script>
+                $(".custom-select").each(function () {
+                    var classes = $(this).attr("class"),
+                        id = $(this).attr("id"),
+                        name = $(this).attr("name");
+                    var template = '<div class="' + classes + '">';
+                    template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+                    template += '<div class="custom-options">';
+                    $(this).find("option").each(function () {
+                        template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+                    });
+                    template += '</div></div>';
+
+                    $(this).wrap('<div class="custom-select-wrapper"></div>');
+                    $(this).hide();
+                    $(this).after(template);
+                });
+                $(".custom-option:first-of-type").hover(function () {
+                    $(this).parents(".custom-options").addClass("option-hover");
+                }, function () {
+                    $(this).parents(".custom-options").removeClass("option-hover");
+                });
+                $(".custom-select-trigger").on("click", function () {
+                    bringToTop();
+                    $('html').one('click', function () {
+                        resetToggle();
+                        $(".custom-select").removeClass("opened");
+                    });
+                    $(this).parents(".custom-select").toggleClass("opened");
+                    event.stopPropagation();
+                });
+                $(".custom-option").on("click", function () {
+                    $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+                    $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+                    $(this).addClass("selection");
+                    $(this).parents(".custom-select").removeClass("opened");
+                    $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+                });
+            </script>
+        </div>
+
+        <div id="rate-page">
+            <form>
+                <h1 style="margin-top: 5px;">Men or Women</h1>
+                <div class="wrapper">
+                    <div class="toggle_radio" id="test-toggle">
+                        <input type="radio" class="toggle_option" id="first_toggle" name="menOrWomen" value="men">
+                        <input type="radio" checked class="toggle_option" id="second_toggle" name="menOrWomen" value="women">
+
+                        <label for="first_toggle">
+                            <p>MEN </p>
+                        </label>
+                        <label for="second_toggle">
+                            <p>WOMEN </p>
+                        </label>
+                        <div class="toggle_option_slider">
+                        </div>
+                    </div>
+                </div>
+                <h1>Overall Cleanliness</h1>
+                <div class="wrapper">
+                    <div class="toggle_radio" style="width: 320px">
+
+                        <input type="radio" class="toggle_option" id="first_clean" name="clean-rating" value="bad">
+
+                        <input type="radio" checked class="toggle_option" id="second_clean" name="clean-rating" value="decent">
+
+                        <input type="radio" class="toggle_option" id="third_clean" name="clean-rating" value="good">
+
+
+                        <label for="first_clean">
+                            <p>BAD </p>
+                        </label>
+                        <label for="second_clean">
+                            <p>DECENT </p>
+                        </label>
+                        <label for="third_clean">
+                            <p>GOOD </p>
+                        </label>
+
+                        <div class="toggle_option_slider">
+                        </div>
+                    </div>
+                </div>
+
+                <h1>Private Restroom</h1>
+                <div class="wrapper">
+                    <div class="toggle_radio">
+                        <input type="radio" class="toggle_option" id="first_toggle2" name="toggle_option2">
+                        <input type="radio" checked class="toggle_option" id="second_toggle2" name="toggle_option2">
+
+                        <label for="first_toggle2">
+                            <p>NO </p>
+                        </label>
+                        <label for="second_toggle2">
+                            <p>YES </p>
+                        </label>
+                        <div class="toggle_option_slider">
+                        </div>
+                    </div>
+                </div>
+                <h1>Changing Table</h1>
+                <div class="wrapper">
+                    <div class="toggle_radio">
+                        <input type="radio" class="toggle_option" id="first_toggle3" name="toggle_option3">
+                        <input type="radio" checked class="toggle_option" id="second_toggle3" name="toggle_option3">
+
+                        <label for="first_toggle3">
+                            <p>NO </p>
+                        </label>
+                        <label for="second_toggle3">
+                            <p>YES </p>
+                        </label>
+                        <div class="toggle_option_slider">
+                        </div>
+                    </div>
+                </div>
+                <h1>Outside Pet Area</h1>
+                <div class="wrapper">
+                    <div class="toggle_radio">
+                        <input type="radio" class="toggle_option" id="first_toggle4" name="toggle_option4">
+                        <input type="radio" checked class="toggle_option" id="second_toggle4" name="toggle_option4">
+
+                        <label for="first_toggle4">
+                            <p>NO </p>
+                        </label>
+                        <label for="second_toggle4">
+                            <p>YES </p>
+                        </label>
+                        <div class="toggle_option_slider">
+                        </div>
+                    </div>
+                </div>
+                <h1>Soap Quality</h1>
+                <div class="wrapper">
+                    <div class="toggle_radio" style="width: 320px">
+
+                        <input type="radio" class="toggle_option" id="first_soap" name="soap-rating" value="bad">
+
+                        <input type="radio" checked class="toggle_option" id="second_soap" name="soap-rating" value="decent">
+
+                        <input type="radio" class="toggle_option" id="third_soap" name="soap-rating" value="good">
+
+
+                        <label for="first_soap">
+                            <p>BAD </p>
+                        </label>
+                        <label for="second_soap">
+                            <p>DECENT </p>
+                        </label>
+                        <label for="third_soap">
+                            <p>GOOD </p>
+                        </label>
+
+                        <div class="toggle_option_slider">
+                        </div>
+                    </div>
+                </div>
+                <!--<input type="submit">-->
+                <a href="map_screen.html">
+                    <div id="submit-button">Submit</div>
+                </a>
+            </form>
+        </div>
+</body>
+
+</html>
