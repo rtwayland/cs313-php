@@ -7,7 +7,7 @@ function loadDatabase()
     $dbUser = '';
     $dbPassword = '';
 
-    $dbName = 'bathroom_guide';
+    $dbName = '';
 
     $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
 
