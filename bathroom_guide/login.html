@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" lang="en" />
+    <meta name="author" content="Raleigh Wayland" />
+    <title>Bathroom Guide Login</title>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script type="text/javascript">
+        function clearPlaceholder() {
+            var nameField = document.getElementById('name');
+            nameField.placeholder = "";
+        }
+
+        function clearPlaceholder2() {
+            var emailField = document.getElementById('email');
+            emailField.placeholder = "";
+        }
+
+        function fillPlaceholder() {
+            var nameField = document.getElementById('name');
+            nameField.placeholder = "Full Name";
+        }
+
+        function fillPlaceholder2() {
+            var emailField = document.getElementById('email');
+            emailField.placeholder = "Email";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="app-wrapper" id="login-screen">
+      <h1 id="login-welcome">Welcome to<br>Bathroom Guide!</h1>
+        <div class="login-form-container">
+            <form>
+                <input type="text" id="name" placeholder="Full Name" onfocus="clearPlaceholder()" onblur="fillPlaceholder()">
+                <br>
+                <input type="text" id="email" placeholder="Email" onfocus="clearPlaceholder2()" onblur="fillPlaceholder2()">
+                <br>
+                <a href="index.html">
+                    <div class="login-button">
+                        Login
+                    </div>
+                </a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
