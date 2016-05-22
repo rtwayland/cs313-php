@@ -4,23 +4,27 @@
 <head>
     <meta charset="utf-8" lang="en" />
     <meta name="author" content="Raleigh Wayland" />
-    <title>Bathroom Guide Login</title>
+    <title>Bathroom Guide Sign-up</title>
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 
 <body>
-    <div class="app-wrapper" id="login-screen">
-        <h1 id="login-welcome">Welcome back!</h1>
+    <div class="app-wrapper" id="sign-up">
+      <h1 id="login-welcome">Welcome to<br>Bathroom Guide!</h1>
         <div class="login-form-container">
             <form>
+                <input type="text" id="name" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'">
+                <br>
                 <input type="text" id="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
                 <br>
                 <input type="text" id="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
                 <br>
+                <input type="text" id="pass-confirm" placeholder="Confirm Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'">
+                <br>
                 <a href="index.html">
                     <div class="login-button">
-                        Login
+                        Sign Up
                     </div>
                 </a>
             </form>

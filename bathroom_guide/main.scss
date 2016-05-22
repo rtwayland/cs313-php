@@ -1,3 +1,11 @@
+$theme-color: dodgerblue;
+$webpage-color: lighten(#1E2028, 15%);
+$app-background: white;
+$button-shadow: darken($theme-color, 20%);
+$text-color: white;
+$find-rate-color: white;
+$toggle-slide-color: rgba(255, 255, 255, .3);
+
 * {
   font-family: 'Quicksand', sans-serif;
 }
@@ -6,9 +14,10 @@ html {
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: aquamarine;
+    background-color: $webpage-color;
     position: fixed;
     z-index: -5;
+    overflow: auto;
 }
 a {
     text-decoration: none;
@@ -17,18 +26,18 @@ a {
     width: 375px;
     height: 627px;
     display: block;
-    margin: 50px auto auto;
-    background-color: white;
+    margin: 45px auto auto;
+    background-color: $app-background;
     position: relative;
     z-index: -5;
 }
 /*********LOGIN SCREEN***********/
-#login-screen {
-    background-color: dodgerblue;
+#login-screen, #sign-up {
+    background-color: $theme-color;
     overflow: auto;
     h1 {
       font-size: 2em;
-      color: white;
+      color: $text-color;
       text-align: center;
       margin-top: 100px;
     }
@@ -36,7 +45,7 @@ a {
         width: 80%;
         height: 20%;
         display: block;
-        margin: 20% auto auto;
+        margin: 25% auto auto;
         form {
             width: 100%;
             height: 100%;
@@ -52,9 +61,9 @@ a {
                 background-color: rgba(255, 255, 255, 0.2);
                 font-size: 18px;
                 outline: 0;
-                color: white;
+                color: $text-color;
                 &::-webkit-input-placeholder {
-                    color: white;
+                    color: $text-color;
                 }
                 &:focus,
                 &:hover {
@@ -76,20 +85,28 @@ a {
       width: 80px;
       height: 40px;
       background-color: rgba(255, 255, 255, 0.4);
-      color: white;
+      color: $text-color;
       border-radius: 3px;
       transition: all .2s ease-in-out;
+      box-shadow: 1px 2px 10px $button-shadow;
       &:hover {
         transform: scale(1.1);
+        box-shadow: 3px 4px 15px $button-shadow;
       }
       &:active {
         transform: scale(1.2);
+        box-shadow: 5px 6px 20px $button-shadow;
       }
+    }
+}
+#sign-up {
+  .login-form-container {
+      margin: 10% auto auto;
     }
 }
 /*********HOME SCREEN***********/
 #home-screen {
-    background-color: dodgerblue;
+    background-color: $theme-color;
 }
 #home-padding {
     width: 100%;
@@ -97,7 +114,7 @@ a {
 }
 #logo h1 {
     text-align: center;
-    color: whitesmoke;
+    color: $text-color;
     font-size: 2.5em;
     padding-bottom: 60px;
 }
@@ -107,7 +124,7 @@ a {
     border-radius: 50%;
     display: block;
     margin: 20px auto auto;
-    background-color: whitesmoke;
+    background-color: $find-rate-color;
     clear: both;
     h1 {
         text-align: center;
@@ -121,7 +138,7 @@ a {
     border-radius: 50%;
     display: block;
     margin: auto;
-    background-color: whitesmoke;
+    background-color: $find-rate-color;
     clear: both;
     h1 {
         text-align: center;
@@ -135,13 +152,13 @@ a {
     height: 80px;
 }
 .home-search-bar a {
-    color: whitesmoke;
+    color: $text-color;
 }
 .home-button {
     display: inline-block;
     width: 69px;
     height: 100%;
-    background-color: dodgerblue;
+    background-color: $theme-color;
     h1 {
         font-size: 1.2em;
         text-align: center;
@@ -154,7 +171,7 @@ a {
     width: 80%;
     height: 93%;
     font-size: 150%;
-    color: dodgerblue;
+    color: $theme-color;
     border: solid 2px;
 }
 #img-container {
@@ -169,9 +186,9 @@ a {
     height: 160px;
     position: absolute;
     bottom: 0;
-    background-color: dodgerblue;
+    background-color: $theme-color;
     visibility: hidden;
-    color: whitesmoke;
+    color: $text-color;
     h1 {
         font-size: 1.5em;
         margin-top: 0;
@@ -188,7 +205,7 @@ a {
         margin-left: 5px;
     }
     a {
-        color: whitesmoke;
+        color: $text-color;
         margin-left: 5px;
     }
 }
@@ -196,7 +213,7 @@ a {
     text-decoration: underline;
 }
 #green-font {
-    color: greenyellow;
+    color: $text-color;
     font-size: 1.2em;
 }
 .detail-button {
@@ -208,7 +225,7 @@ a {
     height: 40px;
     border-radius: 30px;
     text-align: center;
-    background-color: rgba(255, 255, 255, .3);
+    background-color: $toggle-slide-color;
 }
 .rate-button {
     margin-top: -50px;
@@ -220,7 +237,7 @@ a {
     width: 25%;
     border-radius: 30px;
     text-align: center;
-    background-color: rgba(255, 255, 255, .3);
+    background-color: $toggle-slide-color;
 }
 .rate-button-details {
     margin: 30px auto auto;
@@ -231,8 +248,8 @@ a {
     border-radius: 50%;
     font-size: 1.2em;
     text-align: center;
-    background-color: dodgerblue;
-    color: whitesmoke;
+    background-color: $theme-color;
+    color: $text-color;
     h4 {
         margin-top: 35px;
     }
@@ -241,7 +258,7 @@ a {
 .ratings-bar {
     width: 100%;
     height: 80px;
-    background-color: dodgerblue;
+    background-color: $theme-color;
 }
 #ratings-page {
     h1 {
@@ -257,13 +274,13 @@ a {
     }
 }
 #back-home {
-    color: whitesmoke;
+    color: $text-color;
     margin-left: 6px;
     font-size: 1.2em;
     line-height: 80px;
 }
 #back-map {
-    color: whitesmoke;
+    color: $text-color;
     float: right;
     margin-right: 6px;
     font-size: 1.2em;
@@ -293,7 +310,7 @@ table h2 {
 }
 .toggle_radio {
     position: relative;
-    background-color: rgba(51, 153, 255, .9);
+    background-color: rgba($theme-color, .9);
     margin: 4px auto;
     overflow: hidden;
     padding: 0 !important;
@@ -345,88 +362,88 @@ table h2 {
 }
 /******MEN OR WOMEN******/
 #first_toggle:checked ~ .toggle_option_slider {
-    background: rgba(255, 255, 255, .3);
+    background: $toggle-slide-color;
     left: 3px;
     top: 2px;
     height: 25px;
 }
 #second_toggle:checked ~ .toggle_option_slider {
-    background: rgba(255, 255, 255, .3);
+    background: $toggle-slide-color;
     left: 109px;
     top: 2px;
     height: 25px;
 }
 /******BATHROOM CLEANLINESS RATING******/
 #first_clean:checked ~ .toggle_option_slider {
-    background: rgba(255, 255, 255, .3);
+    background: $toggle-slide-color;
     left: 3px;
     top: 2px;
     height: 25px;
 }
 #second_clean:checked ~ .toggle_option_slider {
-    background: rgba(255, 255, 255, .3);
+    background: $toggle-slide-color;
     left: 109px;
     top: 2px;
     height: 25px;
 }
 #third_clean:checked ~ .toggle_option_slider {
-    background: rgba(255, 255, 255, .3);
+    background: $toggle-slide-color;
     left: 217px;
     top: 2px;
     height: 25px;
 }
 /******OTHER RATING******/
 #first_toggle2:checked ~ .toggle_option_slider {
-    background: rgba(255, 255, 255, .3);
+    background: $toggle-slide-color;
     left: 3px;
     top: 2px;
     height: 25px;
 }
 #second_toggle2:checked ~ .toggle_option_slider {
-    background: rgba(255, 255, 255, .3);
+    background: $toggle-slide-color;
     left: 109px;
     top: 2px;
     height: 25px;
 }
 #first_toggle3:checked ~ .toggle_option_slider {
-    background: rgba(255, 255, 255, .3);
+    background: $toggle-slide-color;
     left: 3px;
     top: 2px;
     height: 25px;
 }
 #second_toggle3:checked ~ .toggle_option_slider {
-    background: rgba(255, 255, 255, .3);
+    background: $toggle-slide-color;
     left: 109px;
     top: 2px;
     height: 25px;
 }
 #first_toggle4:checked ~ .toggle_option_slider {
-    background: rgba(255, 255, 255, .3);
+    background: $toggle-slide-color;
     left: 3px;
     top: 2px;
     height: 25px;
 }
 #second_toggle4:checked ~ .toggle_option_slider {
-    background: rgba(255, 255, 255, .3);
+    background: $toggle-slide-color;
     left: 109px;
     top: 2px;
     height: 25px;
 }
 /******SOAP RATING******/
 #first_soap:checked ~ .toggle_option_slider {
-    background: rgba(255, 255, 255, .3);
+    background: $toggle-slide-color;
     left: 3px;
     top: 2px;
     height: 25px;
 }
 #second_soap:checked ~ .toggle_option_slider {
-    background: rgba(255, 255, 255, .3);
+    background: $toggle-slide-color;
     left: 109px;
     top: 2px;
     height: 25px;
 }
 #third_soap:checked ~ .toggle_option_slider {
-    background: rgba(255, 255, 255, .3);
+    background: $toggle-slide-color;
     left: 217px;
     top: 2px;
     height: 25px;
@@ -438,8 +455,8 @@ table h2 {
     width: 25%;
     border-radius: 30px;
     text-align: center;
-    background-color: dodgerblue;
-    color: whitesmoke;
+    background-color: $theme-color;
+    color: $text-color;
 }
 /*****************Drop Menu**********************/
 .center {
@@ -470,9 +487,9 @@ table h2 {
     padding: 0 84px 0 22px;
     font-size: 22px;
     font-weight: 300;
-    color: whitesmoke;
+    color: $text-color;
     line-height: 60px;
-    background: #1E90FF;
+    background: $theme-color;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -505,7 +522,7 @@ table h2 {
     right: 0;
     min-width: 100%;
     margin: 15px 0;
-    border: 1px solid #1E90FF;
+    border: 1px solid $theme-color;
     border-radius: 4px;
     box-sizing: border-box;
     box-shadow: 0 2px 1px rgba(0, 0, 0, .07);
@@ -533,8 +550,8 @@ table h2 {
     width: 7px;
     height: 7px;
     margin-bottom: -4px;
-    border-top: 1px solid #1E90FF;
-    border-left: 1px solid #1E90FF;
+    border-top: 1px solid $theme-color;
+    border-left: 1px solid $theme-color;
     background: #fff;
     transform: rotate(45deg);
     transition: all 0.4s ease-in-out;
@@ -546,10 +563,10 @@ table h2 {
     position: relative;
     display: block;
     padding: 0 22px;
-    border-bottom: 1px solid #1E90FF;
+    border-bottom: 1px solid $theme-color;
     font-size: 18px;
     font-weight: 600;
-    color: #1E90FF;
+    color: $theme-color;
     line-height: 47px;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
@@ -564,6 +581,6 @@ table h2 {
 /*******Option Hover*********/
 .custom-option.selection,
 .custom-option:hover {
-    background: #1E90FF;
-    color: whitesmoke;
+    background: $theme-color;
+    color: $text-color;
 }
