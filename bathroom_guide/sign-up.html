@@ -7,21 +7,34 @@
     <title>Bathroom Guide Sign-up</title>
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <script type="text/javascript">
+      function confirmPassword() {
+        var firstPass = document.getElementById('pass').value;
+        var secondPass = document.getElementById('pass-confirm').value;
+
+        if (secondPass !== firstPass) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
 </head>
 
 <body>
     <div class="app-wrapper" id="sign-up">
       <h1 id="login-welcome">Welcome to<br>Bathroom Guide!</h1>
         <div class="login-form-container">
-            <form>
-                <input type="text" id="name" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'">
+            <form onsubmit="return confirmPassword()" action="http://localhost/php/bathroom_guide/test_insert.php" method="post">
+                <input type="text" id="name" name="name" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'">
                 <br>
-                <input type="text" id="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
+                <input type="text" id="email" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
                 <br>
-                <input type="text" id="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                <input type="text" id="pass" name="pass" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
                 <br>
                 <input type="text" id="pass-confirm" placeholder="Confirm Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'">
                 <br>
+                <button type="sumbit" name="button">Submit</button>
                 <a href="index.html">
                     <div class="login-button">
                         Sign Up
