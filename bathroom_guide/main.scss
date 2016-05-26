@@ -31,9 +31,7 @@ a {
     z-index: -5;
 }
 /*********LOGIN SCREEN***********/
-#add-bath,
-#login-screen,
-#sign-up {
+.form-screen {
     background-color: $theme-color;
     overflow: auto;
     h1 {
@@ -42,7 +40,7 @@ a {
         text-align: center;
         margin-top: 100px;
     }
-    .login-form-container {
+    .form-container {
         width: 80%;
         height: 20%;
         display: block;
@@ -80,7 +78,7 @@ a {
 }
 #add-bath,
 #sign-up {
-    .login-form-container {
+    .form-container {
         margin: 10% auto auto;
     }
 }
@@ -111,6 +109,23 @@ a {
 }
 #add-bath-button {
     width: 150px;
+}
+.login-signup-options {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: center;
+}
+.inline {
+  display: inline-block;
+}
+.guest-link {
+  margin-top: 20px;
+  text-align: center;
+  a {
+    color: $text-color;
+    text-decoration: underline;
+  }
 }
 /*********HOME SCREEN***********/
 #home-screen {

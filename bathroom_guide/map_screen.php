@@ -34,7 +34,7 @@
 <body>
     <div class="app-wrapper">
         <div class="home-search-bar">
-            <a href="index.html">
+            <a href="home.html">
                 <div class="home-button">
                     <h1>HOME</h1></div>
             </a>
@@ -228,7 +228,7 @@
             <p>163 W Main St
                 <br> Rexburg, ID 83440</p>
             <h2><span id="underline">Overall Rating</span>: <span id="green-font">DECENT</span></h2>
-            <a href="pizza_rating_screen.html">
+            <a href="pizza_details_screen.html">
                 <div class="detail-button">
                     View Details
                 </div>

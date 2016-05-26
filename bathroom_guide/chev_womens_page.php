@@ -25,7 +25,7 @@
      <body>
          <div class="app-wrapper">
              <div class="ratings-bar">
-                 <a href="index.html" id="back-home">HOME</a>
+                 <a href="home.html" id="back-home">HOME</a>
                  <a href="map_screen.php" id="back-map">BACK TO MAP</a>
              </div>
 

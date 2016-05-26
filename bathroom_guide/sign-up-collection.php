@@ -28,4 +28,7 @@ $statement->bindParam(':email', $email);
 $statement->bindParam(':password', $password);
 $statement->execute();
 
+header("location: home.html");
+die("Page should have been redirected");
+
 ?>
