@@ -30,7 +30,7 @@
              </div>
 
              <ul class="nav nav-tabs">
-                 <li><a href="chev_rating_screen.php">MEN</a></li>
+                 <li><a href="chev_details_screen.php">MEN</a></li>
                  <li class="active"><a href="#">WOMEN</a></li>
              </ul>
              <div id="ratings-page">

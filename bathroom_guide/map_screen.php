@@ -210,7 +210,7 @@
 
             ?>
             <h2><span id="underline">Overall Rating</span>: <span id="green-font"><?php echo $rating['cleanliness']; ?></span></h2>
-            <a href="rating_screen.php">
+            <a href="details_screen.php">
                 <div class="detail-button">
                     View Details
                 </div>
@@ -251,7 +251,7 @@
 
           ?>
           <h2><span id="underline">Overall Rating</span>: <span id="green-font"><?php echo $rating['cleanliness']; ?></span></h2>
-            <a href="chev_rating_screen.php">
+            <a href="chev_details_screen.php">
                 <div class="detail-button">
                     View Details
                 </div>

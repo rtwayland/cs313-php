@@ -29,7 +29,7 @@
                  <a href="map_screen.php" id="back-map">BACK TO MAP</a>
              </div>
         <ul class="nav nav-tabs">
-            <li><a href="rating_screen.php">MEN</a></li>
+            <li><a href="details_screen.php">MEN</a></li>
             <li class="active"><a href="#">WOMEN</a></li>
         </ul>
         <div id="ratings-page">
