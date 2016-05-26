@@ -25,6 +25,7 @@ function loadDatabase()
         $dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
     }
     $db = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPassword);
+    $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
     return $db;
 }
