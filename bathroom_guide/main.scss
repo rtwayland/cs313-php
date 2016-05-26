@@ -5,9 +5,8 @@ $button-shadow: darken($theme-color, 20%);
 $text-color: white;
 $find-rate-color: white;
 $toggle-slide-color: rgba(255, 255, 255, .3);
-
 * {
-  font-family: 'Quicksand', sans-serif;
+    font-family: 'Avenir', 'Quicksand', sans-serif;
 }
 body,
 html {
@@ -32,14 +31,15 @@ a {
     z-index: -5;
 }
 /*********LOGIN SCREEN***********/
-#login-screen, #sign-up {
+#login-screen,
+#sign-up {
     background-color: $theme-color;
     overflow: auto;
     h1 {
-      font-size: 2em;
-      color: $text-color;
-      text-align: center;
-      margin-top: 100px;
+        font-size: 2em;
+        color: $text-color;
+        text-align: center;
+        margin-top: 100px;
     }
     .login-form-container {
         width: 80%;
@@ -77,31 +77,33 @@ a {
         }
     }
     .login-button {
-      display: block;
-      margin: auto;
-      margin-top: 10px;
-      text-align: center;
-      line-height: 40px;
-      width: 80px;
-      height: 40px;
-      background-color: rgba(255, 255, 255, 0.4);
-      color: $text-color;
-      border-radius: 3px;
-      transition: all .2s ease-in-out;
-      box-shadow: 1px 2px 10px $button-shadow;
-      &:hover {
-        transform: scale(1.1);
-        box-shadow: 3px 4px 15px $button-shadow;
-      }
-      &:active {
-        transform: scale(1.2);
-        box-shadow: 5px 6px 20px $button-shadow;
-      }
+        border: none;
+        font-size: 1em;
+        display: block;
+        margin: 10px auto auto;
+        text-align: center;
+        line-height: 37px;
+        width: 80px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.4);
+        color: $text-color;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 1px 2px 10px $button-shadow;
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 3px 4px 15px $button-shadow;
+        }
+        &:active {
+            transform: scale(1.2);
+            box-shadow: 5px 6px 20px $button-shadow;
+        }
     }
 }
 #sign-up {
-  .login-form-container {
-      margin: 10% auto auto;
+    .login-form-container {
+        margin: 10% auto auto;
     }
 }
 /*********HOME SCREEN***********/
