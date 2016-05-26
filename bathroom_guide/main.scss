@@ -31,6 +31,7 @@ a {
     z-index: -5;
 }
 /*********LOGIN SCREEN***********/
+#add-bath,
 #login-screen,
 #sign-up {
     background-color: $theme-color;
@@ -77,6 +78,7 @@ a {
         }
     }
 }
+#add-bath,
 #sign-up {
     .login-form-container {
         margin: 10% auto auto;
@@ -106,6 +108,9 @@ a {
         transform: scale(1.2);
         box-shadow: 5px 6px 20px $button-shadow;
     }
+}
+#add-bath-button {
+    width: 150px;
 }
 /*********HOME SCREEN***********/
 #home-screen {

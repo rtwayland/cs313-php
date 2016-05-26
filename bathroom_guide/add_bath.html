@@ -10,7 +10,9 @@
 </head>
 
 <body>
-    <div class="app-wrapper">
+    <div class="app-wrapper" id="add-bath">
+      <h1>Add A Bathroom</h1>
+      <div class="login-form-container">
         <form id="add-bath-form" action="http://localhost/php/bathroom_guide/bath-collection.php" method="post">
             <input type="text" name="name" id="name" placeholder="Store Name" required>
             <br>
@@ -20,10 +22,11 @@
             <br>
             <input type="text" name="state" id="state" placeholder="State (ie ID)" required>
             <br>
-            <input type="number" name="zip" id="zip" placeholder="Zip" required>
+            <input type="text" name="zip" id="zip" placeholder="Zip" required>
             <br>
-            <button type="submit" name="button">Add Bathroom</button>
+            <button class="login-button" id="add-bath-button" type="submit" name="button">Add Bathroom</button>
         </form>
+      </div>
     </div>
 </body>
 
