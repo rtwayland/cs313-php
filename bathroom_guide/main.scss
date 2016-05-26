@@ -6,7 +6,7 @@ $text-color: white;
 $find-rate-color: white;
 $toggle-slide-color: rgba(255, 255, 255, .3);
 * {
-    font-family: 'Avenir', 'Quicksand', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 body,
 html {
@@ -76,34 +76,35 @@ a {
             }
         }
     }
-    .login-button {
-        border: none;
-        font-size: 1em;
-        display: block;
-        margin: 10px auto auto;
-        text-align: center;
-        line-height: 37px;
-        width: 80px;
-        height: 40px;
-        background-color: rgba(255, 255, 255, 0.4);
-        color: $text-color;
-        border-radius: 3px;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-        box-shadow: 1px 2px 10px $button-shadow;
-        &:hover {
-            transform: scale(1.1);
-            box-shadow: 3px 4px 15px $button-shadow;
-        }
-        &:active {
-            transform: scale(1.2);
-            box-shadow: 5px 6px 20px $button-shadow;
-        }
-    }
 }
 #sign-up {
     .login-form-container {
         margin: 10% auto auto;
+    }
+}
+.login-button {
+    border: none;
+    outline: 0;
+    font-size: 1em;
+    display: block;
+    margin: 10px auto auto;
+    text-align: center;
+    line-height: 37px;
+    width: 80px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: $text-color;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 1px 2px 10px $button-shadow;
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 3px 4px 15px $button-shadow;
+    }
+    &:active {
+        transform: scale(1.2);
+        box-shadow: 5px 6px 20px $button-shadow;
     }
 }
 /*********HOME SCREEN***********/
@@ -298,7 +299,7 @@ table h2 {
 }
 #rate-page h1 {
     text-align: center;
-    margin-top: 2px;
+    margin-top: 5px;
     font-size: 1.5em;
 }
 #bathroom-select {
@@ -325,6 +326,9 @@ table h2 {
     margin-top: -12px;
     margin-bottom: 20px;
     z-index: 0;
+}
+.extended_toggle {
+    width: 320px;
 }
 .toggle_radio > * {
     float: left;
