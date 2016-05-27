@@ -200,6 +200,7 @@
                 });
             }
         </script>
+        <a href="add_bath.html"><div class="add-a-bathroom">+</div></a>
 
         <div id="map-footer" class="map-footers">
             <?php

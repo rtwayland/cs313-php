@@ -111,21 +111,21 @@ a {
     width: 150px;
 }
 .login-signup-options {
-  display: flex;
-  width: 70%;
-  margin: auto;
-  justify-content: center;
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: center;
 }
 .inline {
-  display: inline-block;
+    display: inline-block;
 }
 .guest-link {
-  margin-top: 20px;
-  text-align: center;
-  a {
-    color: $text-color;
-    text-decoration: underline;
-  }
+    margin-top: 20px;
+    text-align: center;
+    a {
+        color: $text-color;
+        text-decoration: underline;
+    }
 }
 /*********HOME SCREEN***********/
 #home-screen {
@@ -203,6 +203,20 @@ a {
     height: 100%;
     position: absolute;
     clear: both;
+}
+.add-a-bathroom {
+    width: 20%;
+    height: 50px;
+    background-color: $theme-color;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: -50px auto 0;
+    border-radius: 50px 50px 0 0;
+    font-size: 3em;
+    text-align: center;
+    line-height: 55px;
+    color: $text-color;
 }
 .map-footers {
     width: 100%;
@@ -474,7 +488,10 @@ table h2 {
     top: 2px;
     height: 25px;
 }
-#submit-button {
+.submit-button {
+    cursor: pointer;
+    border: none;
+    outline: 0;
     display: block;
     margin: 18px auto;
     padding: 8px 0;
@@ -482,6 +499,7 @@ table h2 {
     border-radius: 30px;
     text-align: center;
     background-color: $theme-color;
+    font-size: 1em;
     color: $text-color;
 }
 /*****************Drop Menu**********************/

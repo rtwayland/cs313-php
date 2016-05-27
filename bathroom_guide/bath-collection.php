@@ -33,4 +33,7 @@ $statement->bindParam(':state', $state);
 $statement->bindParam(':zip', $zip);
 $statement->execute();
 
+header("location: bathroom-confirmation.html");
+die("Page should have been redirected");
+
 ?>

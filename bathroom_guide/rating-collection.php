@@ -34,4 +34,7 @@ $statement->bindParam(':pets', $pets);
 $statement->bindParam(':soap', $soap);
 $statement->execute();
 
+header("location: rating-confirmation.html");
+die("Page should have been redirected");
+
 ?>
