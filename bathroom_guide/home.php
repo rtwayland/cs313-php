@@ -1,3 +1,13 @@
+<?php
+  session_start();
+  $user = $_SESSION["user"];
+
+  // if (isset($user)) {
+  //   echo "Hello " . $user . "<br>\n";
+  // }
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 

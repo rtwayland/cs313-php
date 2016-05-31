@@ -34,7 +34,7 @@
 <body>
     <div class="app-wrapper">
         <div class="home-search-bar">
-            <a href="home.html">
+            <a href="home.php">
                 <div class="home-button">
                     <h1>HOME</h1></div>
             </a>

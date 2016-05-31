@@ -1,11 +1,12 @@
 <?php
-
+require 'password.php';
 $name = $email = $password = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = test_input($_POST['name']);
     $email = test_input($_POST['email']);
     $password = test_input($_POST['pass']);
+    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 }
 
 function test_input($data)
@@ -34,10 +35,10 @@ if (sizeof($users) > 0) {
 
   $statement->bindParam(':name', $name);
   $statement->bindParam(':email', $email);
-  $statement->bindParam(':password', $password);
+  $statement->bindParam(':password', $passwordHash);
   $statement->execute();
 
-  header("location: home.html");
+  header("location: home.php");
   die("Page should have been redirected");
 }
 

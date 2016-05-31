@@ -1,4 +1,5 @@
 <?php
+require 'password.php';
 $email = $password = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -23,9 +24,12 @@ $stmt = $db->prepare($query);
 $stmt->execute();
 $users = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
+session_start();
+$_SESSION["user"] = $users[0]['email'];
+
 if (sizeof($users) > 0) {
-  if ($password == $users[0]['password']) {
-      header("location: home.html");
+  if(password_verify($password, $users[0]['password'])) {
+      header("location: home.php");
       die("Page should have been redirected");
   } else {
     echo "Wrong password";
