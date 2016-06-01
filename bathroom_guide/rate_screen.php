@@ -1,3 +1,6 @@
+<?php
+  $bath_id = $_GET['id'];
+ ?>
 <!DOCTYPE html>
 <html>
 
@@ -134,6 +137,7 @@
                         </div>
                     </div>
                 </div>
+                <input type="hidden" name="bath_id" value="<?=$bath_id?>">
                 <!--<input type="submit">-->
                 <!-- <button class="login-button" type="submit" name="button">Sign Up</button> -->
                 <button class="submit-button" type="submit" name="button">Submit</button>

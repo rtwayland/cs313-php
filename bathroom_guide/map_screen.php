@@ -217,11 +217,17 @@
                 </div>
             </a>
             <br>
-            <a href="rate_screen.html">
-                <div class="rate-button">
-                    Rate This Bathroom
-                </div>
-            </a>
+
+              <a href="rate_screen.php?id=<?=$bathroom['id']?>">
+                <div class='rate-button'>Rate This Bathroom</div>
+              </a>";
+
+
+            <!-- <button class="login-button" type="button" name="button" onclick="">Rate This Bathroom</button> -->
+
+
+
+
         </div>
 
 <!--        <div id="map-footer2" class="map-footers">
@@ -235,7 +241,7 @@
                 </div>
             </a>
             <br>
-            <a href="rate_screen.html">
+            <a href="rate_screen.php">
                 <div class="rate-button">
                     Rate This Bathroom
                 </div>
@@ -258,7 +264,7 @@
                 </div>
             </a>
             <br>
-            <a href="rate_screen.html">
+            <a href="rate_screen.php">
                 <div class="rate-button">
                     Rate This Bathroom
                 </div>

@@ -64,7 +64,7 @@
                    </tr>
                  </table>
 
-                 <a href="rate_screen.html" style="text-decoration: none;">
+                 <a href="rate_screen.php" style="text-decoration: none;">
                      <div class="rate-button-details">
                          <h4>Rate This Bathroom</h4>
                      </div>
