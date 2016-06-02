@@ -44,23 +44,23 @@
                  <table>
                    <tr>
                      <td><h2>Overall Cleanliness: </h2></td>
-                     <td><h2><span id="bathClean"><?php echo $ratings['cleanliness']; ?></span></h2></td>
+                     <td><h2><span id="bathClean"><?php echo $men_rating['cleanliness']; ?></span></h2></td>
                    </tr>
                    <tr>
                      <td><h2>Private Restroom: </h2></td>
-                     <td><h2><?php echo $ratings['private_bath']; ?></h2></td>
+                     <td><h2><?php echo $men_rating['private_bath']; ?></h2></td>
                    </tr>
                    <tr>
                      <td><h2>Changing Table: </h2></td>
-                     <td><h2><?php echo $ratings['changing_table']; ?></h2></td>
+                     <td><h2><?php echo $men_rating['changing_table']; ?></h2></td>
                    </tr>
                    <tr>
                      <td><h2>Outside Pet Area: </h2></td>
-                     <td><h2><?php echo $ratings['pet_area']; ?></h2></td>
+                     <td><h2><?php echo $men_rating['pet_area']; ?></h2></td>
                    </tr>
                    <tr>
                      <td><h2>Soap Quality: </h2></td>
-                     <td><h2><?php echo $ratings['soap_quality']; ?></h2></td>
+                     <td><h2><?php echo $men_rating['soap_quality']; ?></h2></td>
                    </tr>
                  </table>
 
@@ -68,7 +68,7 @@
                    session_start();
                    if (isset($_SESSION['user'])) {
                  ?>
-                 <a href="rate_screen.php" style="text-decoration: none;">
+                 <a href="rate_screen.php?id=<?=$bathroom['id']?>" style="text-decoration: none;">
                      <div class="rate-button-details">
                          <h4>Rate This Bathroom</h4>
                      </div>

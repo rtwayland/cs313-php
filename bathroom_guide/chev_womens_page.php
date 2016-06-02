@@ -35,40 +35,55 @@
              </ul>
              <div id="ratings-page">
                  <?php
-                      echo '<h1>'.$bathroom['name']."</h1>\n";
-                      echo '<p>'.$bathroom['street']."\n<br>\n";
-                      echo $bathroom['city'].', '.$bathroom['state'];
-                      echo ' '.$bathroom['zip']."</p>\n";
+                      echo '<h1>'.$bathroom2['name']."</h1>\n";
+                      echo '<p>'.$bathroom2['street']."\n<br>\n";
+                      echo $bathroom2['city'].', '.$bathroom['state'];
+                      echo ' '.$bathroom2['zip']."</p>\n";
 
                  ?>
                  <table>
                    <tr>
                      <td><h2>Overall Cleanliness: </h2></td>
-                     <td><h2><span id="bathClean"><?php echo $rating['cleanliness']; ?></span></h2></td>
+                     <td><h2><span id="bathClean"><?php echo $women_rating['cleanliness']; ?></span></h2></td>
                    </tr>
                    <tr>
                      <td><h2>Private Restroom: </h2></td>
-                     <td><h2><?php echo $rating['private_bath']; ?></h2></td>
+                     <td><h2><?php echo $women_rating['private_bath']; ?></h2></td>
                    </tr>
                    <tr>
                      <td><h2>Changing Table: </h2></td>
-                     <td><h2><?php echo $rating['changing_table']; ?></h2></td>
+                     <td><h2><?php echo $women_rating['changing_table']; ?></h2></td>
                    </tr>
                    <tr>
                      <td><h2>Outside Pet Area: </h2></td>
-                     <td><h2><?php echo $rating['pet_area']; ?></h2></td>
+                     <td><h2><?php echo $women_rating['pet_area']; ?></h2></td>
                    </tr>
                    <tr>
                      <td><h2>Soap Quality: </h2></td>
-                     <td><h2><?php echo $rating['soap_quality']; ?></h2></td>
+                     <td><h2><?php echo $women_rating['soap_quality']; ?></h2></td>
                    </tr>
                  </table>
 
-                 <a href="rate_screen.php" style="text-decoration: none;">
+                 <?php
+                   session_start();
+                   if (isset($_SESSION['user'])) {
+                 ?>
+                 <a href="rate_screen.php?id=<?=$bathroom2['id']?>" style="text-decoration: none;">
                      <div class="rate-button-details">
                          <h4>Rate This Bathroom</h4>
                      </div>
                  </a>
+                 <?php
+                   } else {
+                 ?>
+                 <a href="error-screen-rate-prohibit.html" style="text-decoration: none;">
+                     <div class="rate-button-details">
+                         <h4>Rate This Bathroom</h4>
+                     </div>
+                 </a>
+                 <?php
+                   }
+                 ?>
 
              </div>
          </div>

@@ -25,8 +25,8 @@
                 <h1>Men or Women</h1>
                 <div class="wrapper">
                     <div class="toggle_radio">
-                        <input type="radio" class="toggle_option" id="first_toggle" name="gender" value="men">
-                        <input type="radio" checked class="toggle_option" id="second_toggle" name="gender" value="women">
+                        <input type="radio" class="toggle_option" id="first_toggle" name="gender" value="male">
+                        <input type="radio" checked class="toggle_option" id="second_toggle" name="gender" value="female">
 
                         <label for="first_toggle">
                             <p>MEN </p>
