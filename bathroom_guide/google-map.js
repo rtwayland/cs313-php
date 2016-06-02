@@ -4,11 +4,6 @@ function initAutocomplete() {
         lng: -111.790017
     };
 
-//                var secondPoint = {
-//                    lat: 43.826006,
-//                    lng: -111.788708
-//                };
-
     var thirdPoint = {
         lat: 43.826931,
         lng: -111.789341
@@ -26,11 +21,6 @@ function initAutocomplete() {
         title: 'Maverik'
     });
 
-//                var secondMarker = new google.maps.Marker({
-//                    position: secondPoint,
-//                    map: map,
-//                    title: 'Maverik'
-//                });
 
     var thirdMarker = new google.maps.Marker({
         position: thirdPoint,
@@ -40,10 +30,8 @@ function initAutocomplete() {
     marker.addListener('click', function () {
         var footer = document.getElementById('map-footer');
 
-        //var second = document.getElementById('map-footer2');
         var third = document.getElementById('map-footer3');
 
-        //second.style.visibility = "hidden";
         third.style.visibility = "hidden";
 
         if (footer.style.visibility == "hidden") {
@@ -54,22 +42,7 @@ function initAutocomplete() {
             footer.style.visibility = "visible";
     });
 
-//                secondMarker.addListener('click', function () {
-//                    var footer = document.getElementById('map-footer2');
-//
-//                    var second = document.getElementById('map-footer');
-//                    var third = document.getElementById('map-footer3');
-//
-//                    second.style.visibility = "hidden";
-//                    third.style.visibility = "hidden";
-//
-//                    if (footer.style.visibility == "hidden") {
-//                        footer.style.visibility = "visible";
-//                    } else if (footer.style.visibility == "visible") {
-//                        footer.style.visibility = "hidden";
-//                    } else
-//                        footer.style.visibility = "visible";
-//                });
+
 
     thirdMarker.addListener('click', function () {
         var footer = document.getElementById('map-footer3');
@@ -90,11 +63,9 @@ function initAutocomplete() {
 
     map.addListener('click', function () {
         var footer = document.getElementById('map-footer');
-        //var second = document.getElementById('map-footer2');
         var third = document.getElementById('map-footer3');
 
         footer.style.visibility = "hidden";
-        //second.style.visibility = "hidden";
         third.style.visibility = "hidden";
 
     });

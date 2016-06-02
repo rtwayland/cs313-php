@@ -7,6 +7,30 @@
     <title>Add A Bathroom</title>
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+        function getCoordinates() {
+            var geocoder = new google.maps.Geocoder();
+            var street = document.getElementById('street').value;
+            var city = document.getElementById('city').value;
+            var state = document.getElementById('state').value;
+            var zip = document.getElementById('zip').value;
+            var address = street + " " + city + " " + state + " " + zip;
+
+            geocoder.geocode({
+                'address': address
+            }, function(results, status) {
+
+                if (status == google.maps.GeocoderStatus.OK) {
+                    var latitude = results[0].geometry.location.lat();
+                    var longitude = results[0].geometry.location.lng();
+                    document.getElementById('lat').value = latitude;
+                    document.getElementById('lon').value = longitude;
+                    document.getElementById('add-bath-form').submit();
+                }
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -24,7 +48,13 @@
             <br>
             <input type="text" name="zip" id="zip" placeholder="Zip" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Zip'" required>
             <br>
-            <button class="login-button" id="add-bath-button" type="submit" name="button">Add Bathroom</button>
+            <!-- <p>Latitude: <span id="lat"></span></p>
+            <p>Longitude: <span id="lon"></span></p> -->
+            <input type="hidden" name="lat" id="lat">
+            <input type="hidden" name="lon" id="lon">
+            <!-- <button type="button" name="button" onclick="getCoordinates()">Click</button> -->
+            <button type="button" class="login-button" id="add-bath-button" onclick="getCoordinates()" name="button">Add Bathroom</button>
+            <button type="submit" name="button">Submit</button>
         </form>
       </div>
     </div>
