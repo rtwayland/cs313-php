@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $user = $_SESSION["user"];
+  $user = $_SESSION['user'];
 
   // if (isset($user)) {
   //   echo "Hello " . $user . "<br>\n";
@@ -28,10 +28,26 @@
             <div id="find-button">
                 <h1>FIND</h1></div>
         </a>
-        <a href="rate_screen_from_home.html">
-            <div id="rate-button" style="margin-bottom: 20px;">
-                <h1>RATE</h1></div>
-        </a>
+        <?php
+          session_start();
+          if (isset($_SESSION['user'])) {
+              ?>
+          <a href="rate_screen_from_home.html">
+              <div id="rate-button" style="margin-bottom: 20px;">
+                  <h1>RATE</h1></div>
+          </a>
+          <?php
+          } else {
+              ?>
+          <a href="#">
+              <div id="rate-button" style="margin-bottom: 20px;">
+                  <h1>RATE</h1></div>
+          </a>
+          <?php
+
+          }
+        ?>
+
     </div>
 </body>
 

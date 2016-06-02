@@ -1,4 +1,5 @@
 <?php
+
 require 'password.php';
 $email = $password = '';
 
@@ -24,18 +25,16 @@ $stmt = $db->prepare($query);
 $stmt->execute();
 $users = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
-session_start();
-$_SESSION["user"] = $users[0]['email'];
-
 if (sizeof($users) > 0) {
-  if(password_verify($password, $users[0]['password'])) {
-      header("location: home.php");
-      die("Page should have been redirected");
-  } else {
-    echo "Wrong password";
-  }
+    if (password_verify($password, $users[0]['password'])) {
+        session_start();
+        $_SESSION['user'] = $users[0]['email'];
+        header('location: home.php');
+        die('Page should have been redirected');
+    } else {
+        echo 'Wrong password';
+    }
 } else {
-  require 'error-screen-noaccount.html';
+    require 'error-screen-noaccount.html';
 }
-
- ?>
+?>

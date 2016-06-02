@@ -42,7 +42,8 @@ if (sizeof($users) > 0) {
   $statement->bindParam(':email', $email);
   $statement->bindParam(':password', $passwordHash);
   $statement->execute();
-
+  session_start();
+  $_SESSION['user'] = $users[0]['email'];
   header("location: home.php");
   die("Page should have been redirected");
 }
