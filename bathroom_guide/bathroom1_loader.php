@@ -12,73 +12,76 @@ $women_rating = $ratings[0];
 $men_rating = $ratings[1];
 
 // Women Rating System
-if ($women_rating['cleanliness'] >= 4) {
-  $women_rating['cleanliness'] = "Good";
-} else if ($women_rating['cleanliness'] <= 2) {
-  $women_rating['cleanliness'] = "Bad";
-} else {
-  $women_rating['cleanliness'] = "Decent";
-}
+if (isset($women_rating)) {
+    if ($women_rating['cleanliness'] >= 4) {
+        $women_rating['cleanliness'] = 'Good';
+    } elseif ($women_rating['cleanliness'] <= 2) {
+        $women_rating['cleanliness'] = 'Bad';
+    } else {
+        $women_rating['cleanliness'] = 'Decent';
+    }
 
-if ($women_rating['private_bath'] >= 0.5) {
-  $women_rating['private_bath'] = "Yes";
-} else {
-  $women_rating['private_bath'] = "No";
-}
+    if ($women_rating['private_bath'] >= 0.5) {
+        $women_rating['private_bath'] = 'Yes';
+    } else {
+        $women_rating['private_bath'] = 'No';
+    }
 
-if ($women_rating['changing_table'] >= 0.5) {
-  $women_rating['changing_table'] = "Yes";
-} else {
-  $women_rating['changing_table'] = "No";
-}
+    if ($women_rating['changing_table'] >= 0.5) {
+        $women_rating['changing_table'] = 'Yes';
+    } else {
+        $women_rating['changing_table'] = 'No';
+    }
 
-if ($women_rating['pet_area'] >= 0.5) {
-  $women_rating['pet_area'] = "Yes";
-} else {
-  $women_rating['pet_area'] = "No";
-}
+    if ($women_rating['pet_area'] >= 0.5) {
+        $women_rating['pet_area'] = 'Yes';
+    } else {
+        $women_rating['pet_area'] = 'No';
+    }
 
-if ($women_rating['soap_quality'] >= 4) {
-  $women_rating['soap_quality'] = "Good";
-} else if ($women_rating['soap_quality'] <= 2) {
-  $women_rating['soap_quality'] = "Bad";
-} else {
-  $women_rating['soap_quality'] = "Decent";
+    if ($women_rating['soap_quality'] >= 4) {
+        $women_rating['soap_quality'] = 'Good';
+    } elseif ($women_rating['soap_quality'] <= 2) {
+        $women_rating['soap_quality'] = 'Bad';
+    } else {
+        $women_rating['soap_quality'] = 'Decent';
+    }
 }
-
 // Men Rating System
-if ($men_rating['cleanliness'] >= 4) {
-  $men_rating['cleanliness'] = "Good";
-} else if ($men_rating['cleanliness'] <= 2) {
-  $men_rating['cleanliness'] = "Bad";
-} else {
-  $men_rating['cleanliness'] = "Decent";
-}
+if (isset($men_rating)) {
+    if ($men_rating['cleanliness'] >= 4) {
+        $men_rating['cleanliness'] = 'Good';
+    } elseif ($men_rating['cleanliness'] <= 2) {
+        $men_rating['cleanliness'] = 'Bad';
+    } else {
+        $men_rating['cleanliness'] = 'Decent';
+    }
 
-if ($men_rating['private_bath'] >= 0.5) {
-  $men_rating['private_bath'] = "Yes";
-} else {
-  $men_rating['private_bath'] = "No";
-}
+    if ($men_rating['private_bath'] >= 0.5) {
+        $men_rating['private_bath'] = 'Yes';
+    } else {
+        $men_rating['private_bath'] = 'No';
+    }
 
-if ($men_rating['changing_table'] >= 0.5) {
-  $men_rating['changing_table'] = "Yes";
-} else {
-  $men_rating['changing_table'] = "No";
-}
+    if ($men_rating['changing_table'] >= 0.5) {
+        $men_rating['changing_table'] = 'Yes';
+    } else {
+        $men_rating['changing_table'] = 'No';
+    }
 
-if ($men_rating['pet_area'] >= 0.5) {
-  $men_rating['pet_area'] = "Yes";
-} else {
-  $men_rating['pet_area'] = "No";
-}
+    if ($men_rating['pet_area'] >= 0.5) {
+        $men_rating['pet_area'] = 'Yes';
+    } else {
+        $men_rating['pet_area'] = 'No';
+    }
 
-if ($men_rating['soap_quality'] >= 4) {
-  $men_rating['soap_quality'] = "Good";
-} else if ($men_rating['soap_quality'] <= 2) {
-  $men_rating['soap_quality'] = "Bad";
-} else {
-  $men_rating['soap_quality'] = "Decent";
+    if ($men_rating['soap_quality'] >= 4) {
+        $men_rating['soap_quality'] = 'Good';
+    } elseif ($men_rating['soap_quality'] <= 2) {
+        $men_rating['soap_quality'] = 'Bad';
+    } else {
+        $men_rating['soap_quality'] = 'Decent';
+    }
 }
 
 $stmt = $db->prepare('SELECT * FROM bathroom WHERE id=:id');
