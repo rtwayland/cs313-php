@@ -119,6 +119,11 @@ a {
 .inline {
     display: inline-block;
 }
+.home-logins {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
 .guest-link {
     margin-top: 20px;
     text-align: center;
@@ -139,7 +144,7 @@ a {
     text-align: center;
     color: $text-color;
     font-size: 2.5em;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
 }
 #find-button {
     width: 50%;

@@ -42,11 +42,11 @@
                 <div class="wrapper">
                     <div class="toggle_radio extended_toggle">
 
-                        <input type="radio" class="toggle_option" id="first_clean" name="cleanliness" value="bad">
+                        <input type="radio" class="toggle_option" id="first_clean" name="cleanliness" value="0">
 
-                        <input type="radio" checked class="toggle_option" id="second_clean" name="cleanliness" value="decent">
+                        <input type="radio" checked class="toggle_option" id="second_clean" name="cleanliness" value="3">
 
-                        <input type="radio" class="toggle_option" id="third_clean" name="cleanliness" value="good">
+                        <input type="radio" class="toggle_option" id="third_clean" name="cleanliness" value="5">
 
 
                         <label for="first_clean">
@@ -116,11 +116,11 @@
                 <div class="wrapper">
                     <div class="toggle_radio extended_toggle">
 
-                        <input type="radio" class="toggle_option" id="first_soap" name="soap" value="bad">
+                        <input type="radio" class="toggle_option" id="first_soap" name="soap" value="0">
 
-                        <input type="radio" checked class="toggle_option" id="second_soap" name="soap" value="decent">
+                        <input type="radio" checked class="toggle_option" id="second_soap" name="soap" value="3">
 
-                        <input type="radio" class="toggle_option" id="third_soap" name="soap" value="good">
+                        <input type="radio" class="toggle_option" id="third_soap" name="soap" value="5">
 
 
                         <label for="first_soap">
