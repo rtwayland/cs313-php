@@ -160,12 +160,13 @@ a {
         color: #222;
     }
 }
-#rate-button {
+#add-button {
     width: 50%;
     height: 30%;
     border-radius: 50%;
     display: block;
     margin: auto;
+    margin-bottom: 20px;
     background-color: $find-rate-color;
     clear: both;
     h1 {

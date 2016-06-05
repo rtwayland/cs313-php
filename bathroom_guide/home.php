@@ -23,24 +23,10 @@
             <div id="find-button">
                 <h1>FIND</h1></div>
         </a>
-        <?php
-          session_start();
-          if (isset($_SESSION['user'])) {
-        ?>
-          <a href="rate_screen_from_home.html">
-              <div id="rate-button" style="margin-bottom: 20px;">
-                  <h1>RATE</h1></div>
-          </a>
-        <?php
-          } else {
-        ?>
-          <a href="error-screen-rate-prohibit.html">
-              <div id="rate-button" style="margin-bottom: 20px;">
-                  <h1>RATE</h1></div>
-          </a>
-        <?php
-          }
-        ?>
+        <a href="add_bath.html">
+            <div id="add-button" style="margin-bottom: 20px;">
+                <h1>ADD</h1></div>
+        </a>
 <div class="home-logins">
   <a class="login-button inline" href="login.html">Login</a>
   <a class="login-button inline" href="sign-up.html">Sign Up</a>
