@@ -1,4 +1,9 @@
 function initAutocomplete() {
+    var rexburg = {
+      lat: 43.823110,
+      lng: -111.792424
+    };
+
     var maverik = {
         lat: 43.825759,
         lng: -111.790017
@@ -10,9 +15,9 @@ function initAutocomplete() {
     };
 
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
+        zoom: 14,
         disableDefaultUI: true,
-        center: maverik
+        center: rexburg
     });
 
     var marker = new google.maps.Marker({
