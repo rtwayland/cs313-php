@@ -30,7 +30,7 @@
 <div class="home-logins">
   <a class="login-button inline" href="login.html">Login</a>
   <a class="login-button inline" href="sign-up.html">Sign Up</a>
-  <a class="login-button inline" href="#">Log Out</a>
+  <a class="login-button inline" href="logout.php">Log Out</a>
 </div>
 
 
