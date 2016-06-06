@@ -2,8 +2,11 @@
 $db = loadDatabase();
 
 // $maverikId = $_GET["location"];
-$bathId = 1;
-//$bathId = $_GET['id'];
+//$bathId = 1;
+$bathId = $_GET['id'];
+if (!isset($bathId)) {
+  $bathId = 4;
+}
 $stmt = $db->prepare('SELECT gender, AVG(cleanliness) cleanliness, AVG(private_bath) private_bath, AVG(changing_table) changing_table, AVG(pet_area) pet_area, AVG(soap_quality) soap_quality FROM rating WHERE bathroom_id=:id GROUP BY gender');
 $stmt->bindValue(':id', $bathId, PDO::PARAM_INT);
 $stmt->execute();
