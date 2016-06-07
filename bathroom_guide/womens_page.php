@@ -18,8 +18,6 @@
 
          <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
          <link rel="stylesheet" type="text/css" href="main.css" />
-
-         <script type="text/javascript" src="script.js"></script>
      </head>
 
      <body>

@@ -32,7 +32,7 @@ if (sizeof($users) > 0) {
         header('location: home.php');
         die('Page should have been redirected');
     } else {
-        echo 'Wrong password';
+        require 'error-screen-password.html';
     }
 } else {
     require 'error-screen-noaccount.html';
