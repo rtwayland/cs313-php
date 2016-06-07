@@ -37,7 +37,6 @@
                       echo '<p>'.$bathroom['street']."\n<br>\n";
                       echo $bathroom['city'].', '.$bathroom['state'];
                       echo ' '.$bathroom['zip']."</p>\n";
-
                  ?>
                  <table>
                    <tr>

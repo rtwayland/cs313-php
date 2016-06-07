@@ -13,8 +13,18 @@ $stmt = $db->prepare('SELECT gender, AVG(cleanliness) cleanliness, AVG(private_b
 $stmt->bindValue(':id', $bathId, PDO::PARAM_INT);
 $stmt->execute();
 $ratings = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$women_rating = $ratings[0];
-$men_rating = $ratings[1];
+
+$women_rating;
+$men_rating;
+if (sizeof($ratings) == 1 && $ratings[0]['gender'] == "female") {
+  $women_rating = $ratings[0];
+} elseif (sizeof($ratings) == 1 && $ratings[0]['gender'] == "male") {
+  $men_rating = $ratings[0];
+} else {
+  $women_rating = $ratings[0];
+  $men_rating = $ratings[1];
+}
+
 
 // Women Rating System
 if (isset($women_rating)) {
