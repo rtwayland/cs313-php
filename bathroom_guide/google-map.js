@@ -13,7 +13,9 @@ function initAutocomplete() {
     var bathrooms;
     var lat;
     var lon;
-    //var marker;
+    var bathroom_markers = [];
+    var contents = [];
+    var infoWindows = [];
 
     if (window.XMLHttpRequest) {
         request = new XMLHttpRequest();
@@ -26,6 +28,7 @@ function initAutocomplete() {
         if ((request.readyState === 4) && (request.status === 200)) {
             bathrooms = JSON.parse(request.responseText);
             //console.log(bathrooms);
+            var i = 0;
             for (var index in bathrooms) {
                 if (bathrooms.hasOwnProperty(index)) {
                     var latitude = parseFloat(bathrooms[index].lat);
@@ -36,39 +39,57 @@ function initAutocomplete() {
                         lng: longitude
                     }
 
-                    var marker = new google.maps.Marker({
+                    bathroom_markers[i] = new google.maps.Marker({
                         position: bath_location,
                         map: map,
                         title: bathrooms[index].name,
                         id: bathrooms[index].id,
                         address: bathrooms[index].address
                     });
+                    bathroom_markers[i].index = i;
+                    contents[i] = '<div class="info-window"><span>' + bathroom_markers[i].title + '</span><br>' + bathroom_markers[i].address + '<br>' +
+                        '<a class="view-details-from-window" href="details_screen.php?id=' + bathroom_markers[i].id + '">View Details</a>' + ' ' + '<a class="rate-from-window" href="rate_screen.php?id=' + bathroom_markers[i].id + '">Rate This Bathroom</a></div>';
 
-                    marker.addListener('click', function() {
-                        var footer = document.getElementById('map-footer');
-                        if (footer.style.visibility == "hidden") {
-                            footer.style.visibility = "visible";
-                        } else if (footer.style.visibility == "visible") {
-                            footer.style.visibility = "hidden";
-                        } else
-                            footer.style.visibility = "visible";
+
+                    infoWindows[i] = new google.maps.InfoWindow({
+                        content: contents[i],
+                        maxWidth: 300
                     });
 
-                    // infoHtml = '<a href="details_screen.php?id=2">View Details</a>';
-                    // var infoWindow = new google.maps.InfoWindow();
-                    // infoWindow.setContent(infoHtml);
-                    //
-                    // google.maps.event.addListener(marker, 'click', function() {
-                    //     infoWindow.open(map, marker);
+                    google.maps.event.addListener(bathroom_markers[i], 'click', function() {
+                        for (var window in infoWindows) {
+                            if (infoWindows.hasOwnProperty(window)) {
+                                infoWindows[window].close();
+                            }
+                        }
+                        infoWindows[this.index].open(map, bathroom_markers[this.index]);
+                        map.panTo(bathroom_markers[this.index].getPosition());
+                    });
+
+                    // marker.addListener('click', function() {
+                    //     var footer = document.getElementById('map-footer');
+                    //     if (footer.style.visibility == "hidden") {
+                    //         footer.style.visibility = "visible";
+                    //     } else if (footer.style.visibility == "visible") {
+                    //         footer.style.visibility = "hidden";
+                    //     } else
+                    //         footer.style.visibility = "visible";
                     // });
 
+                    i++;
                 }
             }
 
         }
     }
     request.send();
-
+    google.maps.event.addListener(map, "click", function(event) {
+        for (var window in infoWindows) {
+            if (infoWindows.hasOwnProperty(window)) {
+                infoWindows[window].close();
+            }
+        }
+    });
     map.addListener('click', function() {
         var footer = document.getElementById('map-footer');
 

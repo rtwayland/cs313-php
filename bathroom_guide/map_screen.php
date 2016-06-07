@@ -1,8 +1,7 @@
 <?php
   require 'database_loader.php';
   require 'bathroom1_loader.php';
-  require 'bathroom2_loader.php';
-  require 'convert_to_json.php';
+  require 'bathroom_json.php';
 ?>
 
 <!DOCTYPE html>
@@ -55,9 +54,8 @@
                  echo '<p>'.$bathroom['street']."\n<br>\n";
                  echo $bathroom['city'].', '.$bathroom['state'];
                  echo ' '.$bathroom['zip']."</p>\n";
-
             ?>
-            <h2><span id="underline">Overall Rating</span>: <span id="green-font"><?php echo $rating['cleanliness']; ?></span></h2>
+            <h2><span id="underline">Overall Rating</span>: <?=$rating['cleanliness']; ?></h2>
             <a href="details_screen.php?id=<?=$bathroom['id']?>">
                 <div class="detail-button">
                     View Details
@@ -82,28 +80,6 @@
             ?>
 
         </div>
-
-        <!-- <div id="map-footer3" class="map-footers">
-          <?php
-              //  echo '<h1>'.$bathroom2['name']."</h1>\n";
-              //  echo '<p>'.$bathroom2['street']."\n<br>\n";
-              //  echo $bathroom2['city'].', '.$bathroom['state'];
-              //  echo ' '.$bathroom2['zip']."</p>\n";
-
-          ?>
-          <h2><span id="underline">Overall Rating</span>: <span id="green-font"><?php //echo $rating['cleanliness']; ?></span></h2>
-            <a href="chev_details_screen.php">
-                <div class="detail-button">
-                    View Details
-                </div>
-            </a>
-            <br>
-            <a href="rate_screen.php?id=<?//=$bathroom2['id']?>">
-                <div class="rate-button">
-                    Rate This Bathroom
-                </div>
-            </a>
-        </div> -->
     </div>
 
     </div>

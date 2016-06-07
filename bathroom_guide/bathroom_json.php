@@ -9,7 +9,7 @@ $emparray = array();
 foreach ($bathrooms as $row) {
   $emparray[] = $row;
 }
-
+//echo json_encode($emparray);
 //write to json file
 $jsonFile = fopen('bathrooms.json', 'w');
 fwrite($jsonFile, json_encode($emparray));

@@ -23,7 +23,7 @@ function test_input($data)
     return $data;
 }
 
-$address = $street . ", " . $city . ", " . $state;
+$address = $street . ", " . $city . ", " . $state . ", " . $zip;
 
 require 'database_loader.php';
 $db = loadDatabase();

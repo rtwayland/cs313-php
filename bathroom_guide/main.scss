@@ -120,9 +120,9 @@ a {
     display: inline-block;
 }
 .home-logins {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
 }
 .guest-link {
     margin-top: 20px;
@@ -165,8 +165,7 @@ a {
     height: 30%;
     border-radius: 50%;
     display: block;
-    margin: auto;
-    margin-bottom: 20px;
+    margin: auto auto 20px;
     background-color: $find-rate-color;
     clear: both;
     h1 {
@@ -199,17 +198,10 @@ a {
     float: right;
     width: 80%;
     height: 93%;
-    font-size: 150%;
+    font-size: 1.3em;
     color: $theme-color;
     border: solid 2px;
     outline: none;
-}
-#img-container {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    clear: both;
 }
 .add-a-bathroom {
     width: 20%;
@@ -224,6 +216,29 @@ a {
     text-align: center;
     line-height: 55px;
     color: $text-color;
+}
+.info-window {
+    font-size: 1.3em;
+    span {
+        font-weight: bold;
+        font-size: 1.5em;
+        color: $theme-color;
+    }
+    a {
+        display: inline-block;
+        color: $theme-color;
+        padding-top: 20px;
+        &:visited {
+            color: $theme-color;
+        }
+        &:hover {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+    .view-details-from-window {
+        margin-right: 25px;
+    }
 }
 .map-footers {
     width: 100%;
